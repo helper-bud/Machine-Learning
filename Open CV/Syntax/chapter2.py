@@ -28,7 +28,7 @@ cv2.imshow("Eroded Image",imgEroded)
 cv2.waitKey(0)
 
 '''
-1.1 >
+1.1 > 
 Edge Detector:
 The Canny edge detector is an edge detection operator 
 that uses a multi-stage algorithm to detect a wide range of edges in images. 
