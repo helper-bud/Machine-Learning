@@ -13,10 +13,9 @@ imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)# converts image in different colo
 # > blurring image
 imgBlur = cv2.GaussianBlur(img,(7,7),0)
 
-imgCanny = cv2.Canny(img,100,100)
+imgCanny = cv2.Canny(img,100,100) #1.1
 
-
-imgDialation = cv2.dilate(imgCanny,kernal,iterations= 5) # above we defined the kernal , then iteration will maximize the edge border
+imgDialation = cv2.dilate(imgCanny,kernal,iterations= 5) #1.2 above we defined the kernal , then iteration will maximize the edge border
 
 imgEroded = cv2.erode(imgDialation,kernal, iterations= 1)
 
@@ -29,21 +28,24 @@ cv2.imshow("Eroded Image",imgEroded)
 cv2.waitKey(0)
 
 '''
+1.1 >
 Edge Detector:
 The Canny edge detector is an edge detection operator 
 that uses a multi-stage algorithm to detect a wide range of edges in images. 
 
+1.2 >
 dialoute : to detect edge more properly
+
 Dilation adds pixels to the boundaries of objects in an image, while erosion removes pixels on object boundaries.
 To apply a morphological filter to images in Python using OpenCV, use the cv2 dilate() method. 
 The dilate() method takes two inputs in which one is our input image; 
 the second is called the structuring element or kernel, which decides the nature of the operation. 
 Image dilation Increases the object area.
 
+1.3 >
 erotion:
 Dilation adds pixels to the boundaries of objects in an image, 
 while erosion removes pixels on object boundaries. 
 The number of pixels added or removed from the objects in an image depends on the size 
 and shape of the structuring element used to process the image.
 '''
-
