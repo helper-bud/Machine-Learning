@@ -27,3 +27,4 @@ while True:
     cv2.imshow("Video",img)
     if cv2.waitKey(2) & 0xFF == ord('q'): # wait key adds the delay and pressing q exit the video
         break
+ 
