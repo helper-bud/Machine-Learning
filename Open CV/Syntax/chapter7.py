@@ -11,7 +11,10 @@ img = cv2.imread("res/lambo.png")
 imgHSV  = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) # HSV or Hue Saturation Value is used to separate image luminance from color information
 
 '''
-Hues are made up of the three primary colors (red, blue, and yellow) and the three secondary colors (orange, green, and violet) that appear in the color wheel or color circle. When you refer to hue, you are referring to its pure color, or the visible spectrum of basic colors that can be seen in a rainbow
+Hues are made up of the three primary colors (red, blue, and yellow) and
+the three secondary colors (orange, green, and violet) that appear in the color wheel or color circle. 
+When you refer to hue, you are referring to its pure color,
+or the visible spectrum of basic colors that can be seen in a rainbow
 '''
 cv2.namedWindow("TrackBars")
 cv2.resizeWindow("TrackBars",640,240)
@@ -39,9 +42,13 @@ cv2.createTrackbar("Val Max","TrackBars", 255,255,empty)
 
 
 '''
-getTrackbarPos() is Function in Python OpenCV that returns the current position of the specified trackbar. It takes two arguments. The first is for the trackbar name and the second one is the window name which is the parent of the trackbar. Returns the trackbar position
+getTrackbarPos() is Function in Python OpenCV that returns the current position of the specified trackbar. 
+It takes two arguments. 
+The first is for the trackbar name 
+and the second one is the window name which is the parent of the trackbar. 
+Returns the trackbar position
 '''
-''''''
+
 while True:
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     h_min = cv2.getTrackbarPos("Hue Min", "TrackBars")
